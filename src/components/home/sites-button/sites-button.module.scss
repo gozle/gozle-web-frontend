@@ -1,0 +1,21 @@
+@import 'mixins.scss';
+
+.sites_btn {
+  @include flex(row, center, center);
+
+  font-size: 0.75em;
+  background: none;
+  padding: 0.5em 0 0.5em 0.5em;
+  margin-left: auto;
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+
+  margin-left: 0.25em;
+
+  & > svg {
+    stroke: currentColor;
+  }
+}

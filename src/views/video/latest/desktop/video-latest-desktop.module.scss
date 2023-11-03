@@ -1,0 +1,22 @@
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.media_content {
+  width: 100%;
+}
+
+.video_block {
+  width: 100%;
+
+  @media (min-width: $media-min-width-1) {
+    width: 50%;
+  }
+
+  @media (min-width: $media-min-width-2) {
+    width: 33.333333%;
+  }
+
+  @media (min-width: $media-min-width-4) {
+    width: 25%;
+  }
+}

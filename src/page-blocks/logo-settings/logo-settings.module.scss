@@ -1,0 +1,28 @@
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.container {
+  @include flex(column, center, flex-start);
+
+  font-size: 18px;
+  padding: 1em 1em 0;
+}
+
+.logo {
+  padding: 1em;
+  margin: 1em 0;
+}
+
+@media (min-width: $media-min-width-1) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+
+    font-size: 16px;
+  }
+
+  .logo {
+    margin: 1em;
+    padding: 0;
+  }
+}

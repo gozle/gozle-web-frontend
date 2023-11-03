@@ -1,0 +1,138 @@
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.video_block {
+  @include flex(column, stretch, flex-start);
+}
+
+.content {
+  @include flex(column, stretch, space-between);
+  padding: 0 1em 1em;
+}
+
+.main_content {
+  @include flex(column, stretch, flex-start);
+  width: 100%;
+}
+
+.empty_player_layout {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-color: black;
+
+  &.widescreen {
+    padding-bottom: min(calc(100vh - 220px), 56.25%);
+  }
+}
+
+.empty_player_layout_inner_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.25em;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  margin: 1em 0 0.5em;
+}
+
+.src_container {
+  @include flex(row, center, flex-start);
+  margin: 0 0 1em;
+  font-size: 1em;
+}
+
+.bullet {
+  font-size: 1.25em;
+  padding: 0 0.5em;
+}
+
+.description {
+  overflow: hidden;
+
+  & > input {
+    & ~ .fullDescription {
+      display: none;
+      white-space: break-spaces;
+
+      & > span {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    & ~ .shortDescription > span {
+      overflow-wrap: anywhere;
+      white-space: break-spaces;
+    }
+
+    &:checked {
+      & ~ .shortDescription {
+        display: none;
+      }
+      & ~ .fullDescription {
+        display: block;
+      }
+    }
+  }
+
+  & > div {
+    & > .showFullDescription {
+      cursor: pointer;
+      font-weight: 700;
+      margin-left: 0.5em;
+      white-space: nowrap;
+    }
+
+    & > .hideFullDescription {
+      cursor: pointer;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+  }
+}
+
+.see_also {
+  width: 100%;
+  margin: 1em 0;
+}
+
+@media (min-width: $media-min-width-1) {
+  .src_actions_container {
+    @include flex(row, center, space-between);
+  }
+}
+
+@media (min-width: $media-min-width-2) {
+  .content {
+    @include flex(row, flex-start, space-between);
+  }
+
+  .main_content {
+    &.widescreen {
+      width: 50%;
+    }
+  }
+
+  .see_also {
+    width: 50%;
+  }
+}
+
+@media (min-width: $media-min-width-3) {
+  .main_content {
+    &.widescreen {
+      width: 60%;
+    }
+  }
+
+  .see_also {
+    width: 40%;
+  }
+}

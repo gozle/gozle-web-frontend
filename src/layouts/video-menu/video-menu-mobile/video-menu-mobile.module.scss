@@ -1,0 +1,28 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.container {
+  width: 100%;
+}
+
+.menu_buttons_container {
+  width: 100%;
+  padding: 0.5em;
+  position: sticky;
+  top: -2px;
+  z-index: 2;
+}
+
+.scroll_container {
+  @include flex(row, flex-start, flex-start);
+  overflow-x: auto;
+
+  width: 100%;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll_container::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,18 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.suggestion {
+  @include flex(row, center, flex-start);
+
+  font-size: 1.25em;
+  margin: 1.25em 0;
+}
+
+.suggestion_value {
+  margin-left: 0.5em;
+  cursor: pointer;
+
+  &:hover {
+    color: map-get($colors, 'main');
+  }
+}

@@ -1,0 +1,6 @@
+@import 'mixins.scss';
+
+.header {
+  @include flex(row, center, flex-start);
+  margin-bottom: 1em;
+}

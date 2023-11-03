@@ -1,0 +1,23 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.shortcut_li {
+  @include flex(column, flex-start, flex-start);
+
+  padding: 0.5em;
+}
+
+.icon {
+  @include flex(row, center, center);
+  overflow: hidden;
+}
+
+.title {
+  font-size: 0.8em;
+  margin-bottom: 0.125em;
+}
+
+.description {
+  font-size: 0.65em;
+  color: map-get($colors, 'font-gray');
+}

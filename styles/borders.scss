@@ -1,0 +1,9 @@
+@import './colors.scss';
+
+$border-1-gray: 1px solid map-get($colors, 'border-gray');
+$border-1-lightgray: 1px solid map-get($colors, 'border-lightgray');
+$border-2-main: 2px solid map-get($colors, 'main');
+
+$border-radius-1: 0.5em;
+$border-radius-2: 0.25em;
+$border-radius-3: 1em;

@@ -1,0 +1,26 @@
+@import 'constants.scss';
+@import 'colors.scss';
+
+.container {
+  width: 100%;
+
+  & .button {
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1em;
+    color: currentColor;
+    padding: 1em 4em;
+    cursor: pointer;
+
+    &:disabled {
+      color: map-get($colors, 'font-gray');
+    }
+  }
+}
+
+@media (min-width: $media-min-width-1) {
+  .container {
+    width: max-content;
+  }
+}

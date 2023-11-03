@@ -1,0 +1,37 @@
+@import 'mixins.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.scroll_container {
+  @include flex(row, stretch, flex-start);
+  overflow-x: auto;
+
+  height: 100%;
+  width: 100%;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll_container::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow_left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 0;
+  z-index: 1;
+}
+
+.arrow_right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  right: 0;
+  z-index: 1;
+}

@@ -1,0 +1,9 @@
+@import 'mixins.scss';
+
+.form {
+  @include flex(column, flex-end, flex-start);
+
+  & > button {
+    margin-top: 0.5em;
+  }
+}

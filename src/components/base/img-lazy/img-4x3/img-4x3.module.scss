@@ -1,0 +1,14 @@
+.img_4x3 {
+  padding-bottom: 75%;
+  position: relative;
+  overflow: hidden;
+
+  & > img {
+    position: absolute;
+    inset: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+@import 'constants.scss';
+
+.main_content {
+  padding: 1em;
+
+  & .logo {
+    margin-bottom: 1em;
+  }
+
+  & .page_description {
+    font-size: 1.25em;
+    white-space: break-spaces;
+    max-width: 800px;
+    margin: 1em auto;
+    text-align: center;
+    font-style: italic;
+
+    @media (min-width: $media-min-width-1) {
+      margin: 4em auto 2em;
+    }
+  }
+}

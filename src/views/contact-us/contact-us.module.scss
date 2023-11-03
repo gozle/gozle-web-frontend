@@ -1,0 +1,50 @@
+@import 'colors.scss';
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.contact_us_page {
+  @include flex(column, flex-start, flex-start);
+
+  flex-grow: 1;
+  width: 100%;
+  background-color: map-get($colors, 'page-block');
+}
+
+.logo_language_switch {
+  width: 100%;
+}
+
+.form__container {
+  @include flex(column, stretch, center);
+
+  width: 100%;
+  padding: 2em 1em;
+  margin: auto;
+  max-width: $form-width;
+}
+
+.header {
+  @include flex(column, flex-start, flex-start);
+}
+
+.page_title {
+  margin-bottom: 0.75em;
+}
+
+.page_description {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  white-space: break-spaces;
+}
+
+.page_description_ps {
+  font-weight: 400;
+  margin-top: 0;
+  white-space: break-spaces;
+}
+
+@media (min-width: $media-min-width-1) {
+  .form__container {
+    padding: 0;
+  }
+}

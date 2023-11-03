@@ -1,0 +1,36 @@
+@import 'colors.scss';
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.privacy_page {
+  @include flex(column, flex-start, flex-start);
+
+  flex-grow: 1;
+  width: 100%;
+  background-color: map-get($colors, 'page-block');
+}
+
+.logo_language_switch {
+  width: 100%;
+}
+
+.media_content {
+  padding: 0 1em;
+}
+
+.page_title {
+  margin-bottom: 0.75em;
+}
+
+.page_description {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  white-space: break-spaces;
+}
+
+@media (min-width: $media-min-width-1) {
+  .media_content {
+    margin: 3em 6em;
+    padding: 0;
+  }
+}

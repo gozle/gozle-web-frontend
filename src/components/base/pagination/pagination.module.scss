@@ -1,0 +1,17 @@
+@import 'mixins.scss';
+
+.pagination {
+  @include flex(row, center, center);
+}
+
+.pagination_el {
+  margin: 0 0.125em;
+}
+
+.to_start {
+  margin-right: 0.75em;
+}
+
+.to_next {
+  margin-left: 0.75em;
+}

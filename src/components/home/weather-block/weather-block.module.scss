@@ -1,0 +1,99 @@
+@import 'borders.scss';
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.weather_block {
+  @include flex(column, stretch, flex-start);
+
+  & .title {
+    color: map-get($colors, 'font-gray');
+    font-size: 0.875em;
+    margin-right: 0.5em;
+
+    & > svg {
+      height: 1.5em;
+      vertical-align: middle;
+    }
+  }
+
+  & .value {
+    vertical-align: middle;
+  }
+}
+
+.header {
+  @include flex(row, center, flex-start);
+
+  margin-bottom: 0.5em;
+
+  & > time {
+    color: map-get($colors, 'font-gray');
+    font-size: 1.25em;
+  }
+}
+
+.city_name {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+
+.current_weather {
+  @include flex(row, center, space-between);
+}
+
+.additional_data {
+  @include flex(column, flex-start, flex-start);
+
+  & > div {
+    @include flex(row, center, flex-start);
+    margin: 0.125em 0;
+  }
+}
+
+.temperature {
+  @include flex(column, stretch, flex-start);
+
+  align-self: flex-end;
+}
+
+.current_temperature {
+  @include flex(row, center, center);
+
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+
+.current_weather_icon {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.25em;
+  background-color: currentColor;
+}
+
+.apparent_temperature {
+  text-align: center;
+}
+
+.forecast__container {
+  @include flex(row, center, space-between);
+
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  border-top: $border-1-gray;
+
+  & > div {
+    @include flex(column, flex-start, flex-start);
+  }
+}
+
+.forecast_temperature {
+  @include flex(row, center, flex-start);
+}
+
+.forecast_weather_icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.25em;
+  background-color: currentColor;
+}

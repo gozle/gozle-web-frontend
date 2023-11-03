@@ -1,0 +1,34 @@
+@import 'box-shadows.scss';
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.item {
+  @include flex(column, center, center);
+
+  &:hover,
+  &:focus {
+    & > .icon {
+      transform: translateY(-0.25em);
+    }
+
+    & > .title {
+      color: map-get($colors, 'main');
+    }
+  }
+}
+
+.icon {
+  @include flex(row, center, center);
+  padding: 0.5em;
+  margin-bottom: 0.25em;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.1s ease-in-out;
+  box-shadow: $box-shadow-1;
+}
+
+.title {
+  font-size: 0.875em;
+  font-weight: 700;
+}

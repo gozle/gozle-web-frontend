@@ -1,0 +1,34 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.weather_shortcut {
+  @include flex(column, flex-start, space-between);
+
+  padding: 0.75em 0.5em;
+  background-color: rgba(134, 194, 249, 0.2);
+}
+
+.title {
+  font-size: 0.8em;
+  margin-bottom: 0.125em;
+}
+
+.forecast {
+  font-size: 0.65em;
+  color: map-get($colors, 'font-gray');
+}
+
+.current_weather {
+  @include flex(row, center, space-between);
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.25em;
+  background-color: currentColor;
+}
+
+.current_temperature {
+  font-size: 1.25em;
+}

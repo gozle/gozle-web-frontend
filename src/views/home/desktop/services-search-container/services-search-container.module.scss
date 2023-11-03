@@ -1,0 +1,29 @@
+@import 'mixins.scss';
+
+.container {
+  @include flex(column, center, center);
+
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: 0 1em;
+}
+
+.service_list {
+  margin-bottom: 1em;
+}
+
+.logo_search {
+  @include flex(row, center, center);
+
+  width: 100%;
+  font-size: 1.25em;
+}
+
+.logo {
+  margin-right: 0.75em;
+}
+
+.search_form {
+  flex-grow: 1;
+  max-width: 800px;
+}

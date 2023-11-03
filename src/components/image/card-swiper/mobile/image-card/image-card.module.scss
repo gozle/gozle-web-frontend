@@ -1,0 +1,72 @@
+@import "colors.scss";
+@import "constants.scss";
+@import "mixins.scss";
+
+.container {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.img {
+  @include flex(row, stretch, center);
+
+  width: 100%;
+  max-height: 75vh;
+
+  & > img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+.content {
+  @include flex(column, flex-start, flex-start);
+  font-size: 0.875em;
+  padding: 1.25em;
+}
+
+.header {
+  width: 100%;
+}
+
+.description {
+  --title-color: currentColor;
+  --title-color-hover: map-get($colors, "main");
+
+  color: var(--title-color, currentColor);
+
+  &:hover,
+  &:focus {
+    color: var(--title-color-hover, blue);
+  }
+
+  & > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.src {
+  @include flex(row, flex-start, flex-start);
+  margin: 0.5em 0 1em;
+
+  --src-color: currentColor;
+  --src-color-hover: map-get($colors, "main");
+
+  color: var(--src-color, currentColor);
+
+  &:hover,
+  &:focus {
+    color: var(--src-color-hover, blue);
+  }
+}
+
+.src_icon {
+  margin-right: 0.5em;
+}
+
+.btns {
+  @include flex(row, center, flex-start);
+  padding: 0.5em 1em;
+}

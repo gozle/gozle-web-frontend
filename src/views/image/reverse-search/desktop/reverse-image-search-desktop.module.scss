@@ -1,0 +1,50 @@
+@import 'borders.scss';
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.search_container {
+  @include flex(row, stretch, center);
+
+  // padding: 2em 0.25em;
+
+  padding: 0.5em 0 1em;
+  margin: 0 0.5em 1em;
+  border-bottom: $border-1-gray;
+}
+
+.search_image {
+  @include flex(row, stretch, center);
+
+  & > img {
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.grid_outer_container {
+  width: 100%;
+  padding: 0.25em;
+  overflow-x: hidden;
+}
+
+@media (min-width: $media-min-width-1) {
+  .main {
+    @include flex(row, stretch, flex-start);
+
+    height: calc(100vh - 224px);
+    max-height: calc(100vh - 224px);
+    overflow-y: hidden;
+  }
+
+  .search_container {
+    width: 60%;
+    margin: 0;
+    padding: 2em;
+    border: none;
+  }
+
+  .grid_outer_container {
+    width: 40%;
+  }
+}

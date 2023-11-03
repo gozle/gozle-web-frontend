@@ -1,0 +1,32 @@
+@import 'borders.scss';
+
+.container {
+  position: relative;
+
+  font-size: 20px;
+
+  height: calc(2em);
+  width: calc(2em);
+  padding: 20%;
+
+  border: 1px solid currentColor;
+  border-radius: $border-radius-1;
+
+  & > input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: 0;
+
+    cursor: pointer;
+  }
+
+  & > svg {
+    height: 100%;
+    width: 100%;
+  }
+}

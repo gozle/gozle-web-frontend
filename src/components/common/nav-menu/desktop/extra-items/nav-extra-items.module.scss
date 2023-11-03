@@ -1,0 +1,5 @@
+@import 'mixins.scss';
+
+.container {
+  @include flex(row, center, flex-start);
+}

@@ -1,0 +1,38 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.description {
+  margin-bottom: 1em;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.actions_read_full__container {
+  @include flex(row, center, space-between);
+  margin-top: auto;
+  width: 100%;
+}
+
+.actions {
+  @include flex(row, center, space-between);
+}
+
+.action {
+  height: 1.5em;
+  width: 1.5em;
+  cursor: pointer;
+
+  & > svg {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.read_full {
+  font-weight: 700;
+  font-size: 0.875em;
+  padding: 0.5em 0;
+  &:hover {
+    color: map-get($colors, 'main');
+  }
+}

@@ -1,0 +1,58 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.container {
+  position: relative;
+  padding-bottom: 0.25em;
+}
+
+.container_horizontal {
+  padding-bottom: 0.25em;
+}
+
+.container_vertical {
+  padding-right: 0.5em;
+}
+
+.tabs {
+  & > span {
+    cursor: pointer;
+    white-space: nowrap;
+
+    &[data-active='true'] {
+      color: map-get($colors, 'main');
+    }
+  }
+}
+
+.tabs_horizontal > span {
+  margin: 0 0.25em;
+}
+
+.tabs_vertical {
+  @include flex(column, flex-end, flex-start);
+
+  & > span {
+    text-align: end;
+  }
+}
+
+.slide {
+  position: absolute;
+  background-color: map-get($colors, 'main');
+  transition-timing-function: ease-in-out;
+}
+
+.slide_horizontal {
+  bottom: 0;
+  height: 2px;
+  transition-property: left, right;
+  border-radius: 1px;
+}
+
+.slide_vertical {
+  right: 0;
+  width: 4px;
+  transition-property: top, bottom;
+  border-radius: 2px;
+}

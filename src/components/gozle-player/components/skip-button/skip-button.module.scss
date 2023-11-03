@@ -1,0 +1,40 @@
+@import '../../scss/constants.scss';
+@import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
+
+.button {
+  @include webkitFlex(row, center, center);
+  @include flex(row, center, center);
+
+  padding: 0.5em 0.25em 0.5em 1.25em;
+
+  background: map-get($colors, 'main');
+  color: white;
+
+  font-size: 0.85em;
+
+  border: 1px solid gray;
+  outline: none;
+
+  cursor: pointer;
+
+  &:disabled {
+    background-color: darkgray;
+
+    cursor: not-allowed;
+  }
+
+  @media (min-width: $media-min-width-1) {
+    font-size: 1em;
+    padding: 0.5em 0.5em 0.5em 1.5em;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+
+  width: 1.5em;
+  height: 1.5em;
+
+  margin-left: 0.25em;
+}

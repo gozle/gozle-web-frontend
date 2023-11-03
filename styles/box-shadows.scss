@@ -1,0 +1,4 @@
+@import './colors.scss';
+
+$box-shadow-1: 0 0 5px 0 map-get($colors, 'shadow-lightgray');
+$box-shadow-2: 0 0 5px 1px map-get($colors, 'shadow-lightgray');

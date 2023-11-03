@@ -1,0 +1,22 @@
+@import 'colors.scss';
+
+.img_container {
+  position: relative;
+
+  &:hover + * .title {
+    color: map-get($colors, 'main');
+  }
+}
+
+.title {
+  &:hover,
+  &:focus {
+    color: map-get($colors, 'main');
+  }
+}
+
+.src_container {
+  margin-top: auto;
+  font-size: 0.75em;
+  padding: 0 0 1.5em;
+}

@@ -1,0 +1,83 @@
+@import 'borders.scss';
+@import 'colors.scss';
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.block_central {
+  width: 100%;
+  margin: auto;
+  padding: 0 1em;
+}
+
+.main_content {
+  width: 100%;
+  padding: 0 0.5em;
+}
+
+.channel {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.pagination {
+  font-size: 1em;
+  margin: 2em 0;
+}
+
+.pagination_active {
+  color: map-get($colors, 'search-result-title');
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: map-get($colors, 'main');
+  }
+
+  &.dark {
+    color: map-get($colors, 'search-result-title-dark');
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
+.header {
+  font-size: 1.25em;
+  font-weight: 700;
+  border-bottom: $border-1-gray;
+  padding: 0.25em 0 0;
+  margin-bottom: 0.5em;
+}
+
+.videos_header {
+  margin-top: 1em;
+}
+
+.additional_content {
+  display: none;
+}
+
+@media (min-width: $media-min-width-2) {
+  .main_content {
+    width: 80%;
+  }
+}
+
+@media (min-width: $media-min-width-3) {
+  .block_central {
+    @include flex(row, flex-start, flex-start);
+  }
+
+  .main_content {
+    width: 70%;
+  }
+
+  .additional_content {
+    display: block;
+    padding-top: 2.25em;
+    margin-left: 0.5em;
+    width: 30%;
+  }
+}

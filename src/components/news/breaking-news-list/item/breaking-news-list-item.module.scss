@@ -1,0 +1,17 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.item {
+  @include flex(row, center, flex-start);
+
+  &:hover,
+  &:focus {
+    .title {
+      color: map-get($colors, 'main');
+    }
+  }
+}
+
+.icon {
+  margin-right: 0.5em;
+}

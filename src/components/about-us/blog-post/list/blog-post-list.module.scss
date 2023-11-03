@@ -1,0 +1,70 @@
+@import 'borders.scss';
+@import 'mixins.scss';
+
+.title {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  @include flex(row, stretch, flex-start);
+
+  list-style: none;
+  margin: 0;
+  padding: 0.25em;
+  border-radius: $border-radius-1;
+
+  & + .item {
+    margin-top: 0.25em;
+  }
+}
+
+.img_container {
+  display: flex;
+
+  position: relative;
+  border-radius: $border-radius-1;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  & > a {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  &:hover {
+    & + div .item_title {
+      color: map-get($colors, 'main');
+    }
+  }
+}
+
+.content {
+  @include flex(column, flex-start, space-between);
+
+  padding: 0.5em 1em;
+
+  flex-grow: 1;
+}
+
+.item_title {
+  font-weight: 700;
+  &:hover,
+  &:focus {
+    color: map-get($colors, 'main');
+  }
+}
+
+.item_date {
+  font-size: 0.9em;
+  font-weight: 300;
+  white-space: nowrap;
+  margin-left: auto;
+}

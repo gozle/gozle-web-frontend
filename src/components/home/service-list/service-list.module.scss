@@ -1,0 +1,12 @@
+@import 'mixins.scss';
+
+.list {
+  @include flex(row, center, center);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  & > li {
+    margin: 0 0.5em;
+  }
+}

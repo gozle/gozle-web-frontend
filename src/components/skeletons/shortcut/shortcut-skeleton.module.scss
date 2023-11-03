@@ -1,0 +1,11 @@
+@import 'borders.scss';
+@import 'mixins.scss';
+
+div.shortcut_skeleton {
+  @include flex(row, flex-start, flex-start);
+
+  & > svg {
+    border-radius: $border-radius-3;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,58 @@
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.page_block__central {
+  width: 100%;
+  margin: auto;
+}
+
+.media_content {
+  @include flex(row, flex-start, space-between);
+}
+
+.main_content {
+  width: 100%;
+
+  &.widescreen {
+    width: 100%;
+  }
+}
+
+.sidebar_content {
+  display: none;
+}
+
+@media (min-width: $media-min-width-2) {
+  .main_content {
+    width: 60%;
+  }
+
+  .sidebar_content {
+    display: block;
+    width: 40%;
+  }
+
+  .see_also {
+    margin: 1em 0;
+  }
+}
+
+@media (min-width: $media-min-width-3) {
+  .main_content {
+    width: 66.666667%;
+  }
+
+  .sidebar_content {
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: $media-min-width-4) {
+  .main_content {
+    width: 70%;
+  }
+
+  .sidebar_content {
+    width: 30%;
+  }
+}

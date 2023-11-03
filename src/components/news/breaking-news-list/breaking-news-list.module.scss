@@ -1,0 +1,13 @@
+@import 'mixins.scss';
+
+.breaking_news_list {
+  @include flex(column, center, center);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  & > li {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+}

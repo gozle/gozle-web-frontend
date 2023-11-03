@@ -1,0 +1,11 @@
+@import 'mixins.scss';
+
+.block {
+  @include flex(row, center, center);
+
+  padding: 3em 1em;
+
+  & > .text {
+    text-align: center;
+  }
+}

@@ -1,0 +1,13 @@
+.button {
+  transform: rotate(180deg);
+
+  color: white;
+
+  & > svg {
+    fill: none;
+
+    & > path {
+      stroke: currentColor;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@import "colors.scss";
+@import "constants.scss";
+@import "mixins.scss";
+
+.block_central {
+  max-width: 100%;
+  margin: auto;
+}
+
+.header {
+  font-size: 0.875em;
+  padding: 0 1em;
+}
+
+.search_results_summary {
+  margin: 0.75em 0;
+}
+
+.main_content {
+  width: 100%;
+}
+
+.additional_content {
+  display: none;
+}
+
+.pagination {
+  font-size: 1em;
+  margin: 2em 0;
+}
+
+.pagination_active {
+  color: map-get($colors, "search-result-title");
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: map-get($colors, "main");
+  }
+
+  &.dark {
+    color: map-get($colors, "search-result-title-dark");
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: $media-min-width-1) {
+  .container {
+    padding: 0 1em 0 2.5em;
+  }
+
+  .main_content {
+    max-width: $central-block-width-4;
+  }
+}
+
+@media (min-width: $media-min-width-2) {
+  .container {
+    padding: 0 2.5em;
+  }
+
+  .block_central {
+    max-width: $central-block-width-3;
+  }
+
+  .main_content {
+    width: 80%;
+    max-width: unset;
+    margin: 0;
+  }
+}
+
+@media (min-width: $media-min-width-3) {
+  .block_central {
+    @include flex(row, flex-start, flex-start);
+    max-width: $central-block-width-2;
+  }
+
+  .main_content {
+    width: 60%;
+  }
+
+  .additional_content {
+    display: block;
+    padding-top: 2.25em;
+    margin-left: 0.5em;
+    width: 40%;
+  }
+}
+
+@media (min-width: $media-min-width-4) {
+  .block_central {
+    max-width: $central-block-width-1;
+  }
+
+  .main_content {
+    width: 50%;
+  }
+
+  .additional_content {
+    width: 35%;
+  }
+}

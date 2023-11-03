@@ -1,0 +1,49 @@
+@import 'colors.scss';
+
+.container {
+  padding: 0 0.25em;
+}
+
+.title {
+  font-size: 1.25em;
+  font-weight: 700;
+  // margin-bottom: 0.125em;
+  margin-bottom: 1em;
+}
+
+.subtitle {
+  font-size: 0.875em;
+  margin-bottom: 1em;
+  color: map-get($colors, 'font-gray');
+}
+
+.logo {
+  float: right;
+  margin: 0 0 1em 1em;
+  max-width: 100px;
+  max-height: 100%;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.images {
+  margin: 1em 0;
+}
+
+.contacts {
+  margin: 1em 0;
+  font-size: 0.8em;
+}
+
+.links {
+  margin: 1.5em 0;
+  font-size: 0.8em;
+}
+
+.description {
+  font-size: 0.875em;
+}

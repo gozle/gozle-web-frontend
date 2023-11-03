@@ -1,0 +1,76 @@
+@import "borders.scss";
+@import "colors.scss";
+@import "constants.scss";
+@import "mixins.scss";
+
+.people_searches__container {
+  padding: 0 1em;
+  margin: 2em 0;
+}
+
+.people_searches__title {
+  font-size: 1.25em;
+  margin-bottom: 0.75em;
+}
+
+.people_searches {
+  margin: 0;
+  padding: 0;
+
+  & > a {
+    & > div {
+      @include flex(row, center, flex-start);
+
+      padding: 0.5em 0;
+      color: map-get($colors, "search-result-title");
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: map-get($colors, "main");
+      }
+
+      &.dark {
+        color: map-get($colors, "search-result-title-dark");
+
+        &:hover,
+        &:focus {
+          color: #fff;
+        }
+      }
+
+      & > span:last-child {
+        margin-left: 0.25em;
+      }
+
+      .icon {
+        width: 1.75em;
+        height: 1.75em;
+        padding: 0.25em;
+      }
+    }
+
+    & + a > div {
+      border-top: $border-1-lightgray;
+    }
+  }
+}
+
+@media (min-width: $media-min-width-1) {
+  .people_searches__container {
+    font-size: 0.875em;
+  }
+
+  .people_searches__title {
+    font-size: 1.5em;
+  }
+
+  .people_searches > a {
+    & > div {
+      padding: 0.25em 0;
+    }
+    & + a > div {
+      border: none;
+    }
+  }
+}

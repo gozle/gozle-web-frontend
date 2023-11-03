@@ -1,0 +1,30 @@
+@import 'borders.scss';
+@import 'constants.scss';
+
+.outer_container {
+  border-top: $border-1-lightgray;
+}
+
+.inner_container {
+  width: 100%;
+
+  @media (min-width: $media-min-width-2) {
+    width: $central-block-width-3;
+    margin: auto;
+  }
+
+  @media (min-width: $media-min-width-3) {
+    width: $central-block-width-2;
+  }
+
+  @media (min-width: $media-min-width-4) {
+    width: $central-block-width-1;
+  }
+}
+
+.mobile {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-top: 0.25em;
+}

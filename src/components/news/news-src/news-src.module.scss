@@ -1,0 +1,23 @@
+@import 'mixins.scss';
+
+.news_src {
+  @include flex(row, center, flex-start);
+
+  .icon {
+    margin-right: 0.6em;
+  }
+}
+
+.name {
+  font-weight: 300;
+  font-style: normal;
+}
+
+.news_src_reverse {
+  @include flex(row-reverse, center, flex-start);
+
+  & > cite {
+    margin-right: 0.6em;
+    text-align: end;
+  }
+}

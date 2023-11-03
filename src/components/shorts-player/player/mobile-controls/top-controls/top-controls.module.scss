@@ -1,0 +1,14 @@
+@import '../../../scss/mixins.scss';
+
+.container {
+  @include webkitFlex(row, center, start);
+  @include flex(row, center, flex-start);
+
+  font-size: 0.8em;
+
+  padding: 1em;
+}
+
+.settings {
+  display: inline-flex;
+}

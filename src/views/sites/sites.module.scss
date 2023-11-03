@@ -1,0 +1,32 @@
+@import 'colors.scss';
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.sites_page {
+  @include flex(column, stretch, flex-start);
+
+  background-color: map-get($colors, 'page-block');
+  flex-grow: 1;
+}
+
+.logo_language_switch {
+  width: 100%;
+}
+
+.media_content {
+  padding: 0 1em;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.useful_sites_block {
+  font-size: 1.25em;
+  width: 100%;
+}
+
+@media (min-width: $media-min-width-1) {
+  .media_content {
+    margin-top: 3em;
+    padding: 0 3em;
+  }
+}

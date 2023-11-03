@@ -1,0 +1,14 @@
+.list {
+  width: 100%;
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.block_main {
+  grid-column: span 3;
+}
+
+.paddings {
+  padding: 0.25em;
+}

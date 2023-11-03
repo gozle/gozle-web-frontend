@@ -1,0 +1,15 @@
+@import 'constants.scss';
+
+.swiper {
+  padding: 0 1.25em;
+}
+
+.touchscreen {
+  padding: 0;
+}
+
+@media (min-width: $media-min-width-3) {
+  .swiper {
+    padding: 0;
+  }
+}

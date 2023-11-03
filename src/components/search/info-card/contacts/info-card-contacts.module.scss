@@ -1,0 +1,16 @@
+@import 'mixins.scss';
+
+.container {
+  @include flex(column, flex-start, flex-start);
+}
+
+.row {
+  @include flex(row, flex-start, flex-start);
+
+  margin: 0.125em 0;
+}
+
+.label {
+  margin-right: 0.25em;
+  font-weight: 700;
+}

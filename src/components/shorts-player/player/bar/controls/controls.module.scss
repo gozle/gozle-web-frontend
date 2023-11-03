@@ -1,0 +1,6 @@
+@import '../../../scss/mixins.scss';
+
+.controls {
+  @include webkitFlex(column, stretch, justify);
+  @include flex(column, stretch, space-between);
+}

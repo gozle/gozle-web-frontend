@@ -1,0 +1,38 @@
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.header {
+  padding: 1em 2em;
+}
+
+.central_block {
+  width: 100%;
+  margin: auto;
+}
+
+.media_content {
+  @include flex(row, flex-start, space-between);
+}
+
+.main_content {
+  width: 100%;
+}
+
+.sidebar_content {
+  display: none;
+}
+
+@media (min-width: $media-min-width-3) {
+  .central_block {
+    width: $central-block-width-2;
+  }
+
+  .main_content {
+    width: 73%;
+  }
+
+  .sidebar_content {
+    display: block;
+    width: 27%;
+  }
+}

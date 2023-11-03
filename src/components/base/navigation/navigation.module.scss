@@ -1,0 +1,17 @@
+.link {
+  & > div {
+    display: block;
+    padding: 0.5em 0;
+    margin-right: 0.5em;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+
+    &.active {
+      font-weight: 700;
+      border-color: currentColor;
+    }
+  }
+  & + .link > div {
+    margin: 0 0.5em;
+  }
+}

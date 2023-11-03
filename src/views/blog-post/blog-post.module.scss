@@ -1,0 +1,54 @@
+@import 'borders.scss';
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.logo_language_switch {
+  width: 100%;
+}
+
+.container {
+  @include flex(column-reverse, stretch, flex-start);
+  width: 100%;
+  padding: 2em 1em;
+}
+
+.content {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+
+  font-size: 1.25em;
+}
+
+.img_container {
+  display: flex;
+  width: 100%;
+  border-radius: $border-radius-1;
+  overflow: hidden;
+  position: relative;
+
+  & > img {
+    max-width: 100%;
+  }
+}
+
+.time {
+  font-size: 0.9em;
+  font-weight: 700;
+  white-space: nowrap;
+  margin: auto 0 0 auto;
+}
+
+@media (min-width: $media-min-width-1) {
+  .container {
+    flex-direction: row;
+  }
+
+  .content {
+    width: 50%;
+    padding: 0 1em;
+  }
+
+  .img_container {
+    width: 50%;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'mixins.scss';
+
+.list {
+  @include flex(row, stretch, flex-start);
+  flex-wrap: wrap;
+}
+
+.avatar_container {
+  @include flex(row, center, center);
+}
+
+.container {
+  @include flex(row, center, flex-start);
+  width: 100%;
+  cursor: pointer;
+}
+
+.name {
+  margin-left: 1em;
+  margin-right: 0.5em;
+}

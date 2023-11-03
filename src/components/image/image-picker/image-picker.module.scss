@@ -1,0 +1,54 @@
+@import 'borders.scss';
+@import 'mixins.scss';
+
+.title {
+  font-size: 1em;
+  margin-bottom: 0.75em;
+}
+
+.dad_container {
+  margin-bottom: 1em;
+}
+
+.dad_help {
+  @include flex(column, center, flex-start);
+}
+
+.dad_help_text {
+  white-space: break-spaces;
+  text-align: center;
+}
+
+.url_form {
+  @include flex(row, center, center);
+
+  & > input {
+    height: 2em;
+    outline: none;
+    border: 0;
+    font-size: 1em;
+    padding: 0.5em 0.5em 0.5em;
+    border-radius: $border-radius-2;
+    border: $border-2-main;
+    min-width: 0;
+    flex-grow: 1;
+  }
+
+  & > .search_btn {
+    height: 2em;
+    width: 4.25em;
+    margin-left: 0.5em;
+    border-radius: $border-radius-2;
+    font-size: 1em;
+    border: none;
+    padding: 0.5em 1.5em;
+    background-color: map-get($colors, 'main');
+    cursor: pointer;
+    color: white;
+
+    & > svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

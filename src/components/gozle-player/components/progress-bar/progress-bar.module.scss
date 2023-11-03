@@ -1,0 +1,55 @@
+.area {
+  position: relative;
+}
+
+.area_inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+  background-color: rgba(246, 246, 246, 0.3);
+
+  height: 0.25em;
+
+  cursor: pointer;
+}
+
+.loaded_area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(246, 246, 246, 0.6);
+  pointer-events: none;
+}
+
+.played_area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #00d1ff;
+  pointer-events: none;
+
+  &[data-locked='true'] {
+    background-color: #fc0;
+  }
+}
+
+.pointer {
+  background-color: white;
+  border-radius: 50%;
+  height: 0.75em;
+  width: 0.75em;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}

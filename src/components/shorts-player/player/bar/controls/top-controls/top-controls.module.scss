@@ -1,0 +1,8 @@
+@import '../../../../scss/mixins.scss';
+
+.container {
+  @include webkitFlex(row, center, justify);
+  @include flex(row, center, space-between);
+
+  flex-grow: 1;
+}

@@ -1,0 +1,71 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.src {
+  font-size: 0.7em;
+  margin-left: 1em;
+  flex-shrink: 0;
+  max-width: 30%;
+}
+
+.tags_src {
+  @include flex(row, center, space-between);
+}
+
+.tags {
+  @include flex(row, center, flex-start);
+
+  font-size: 0.7em;
+}
+
+.tag {
+  @include flex(row, center, flex-start);
+
+  font-weight: 300;
+  margin-right: 0.5em;
+}
+
+.tag_icon {
+  height: 1.5em;
+  margin-right: 0.125em;
+
+  & > svg {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.content {
+  @include flex(column, stretch, flex-start);
+
+  padding: 0.25em 0.5em;
+  flex-grow: 1;
+}
+
+.header {
+  @include flex(row, flex-start, space-between);
+}
+
+.title {
+  &:hover,
+  &:focus {
+    color: map-get($colors, 'main');
+  }
+}
+
+.description {
+  font-size: 0.875em;
+}
+
+.footer {
+  @include flex(row, flex-end, flex-start);
+
+  margin-top: auto;
+  font-size: 0.7em;
+
+  & > time {
+    font-weight: 300;
+    white-space: nowrap;
+    margin-left: auto;
+  }
+}

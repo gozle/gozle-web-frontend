@@ -1,0 +1,13 @@
+@import 'borders.scss';
+
+.shortcut_list_item {
+  width: 6em;
+  height: 6em;
+  border-radius: $border-radius-3;
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  & + & {
+    margin-left: 0.5em;
+  }
+}

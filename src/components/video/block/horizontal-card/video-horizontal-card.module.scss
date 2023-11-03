@@ -1,0 +1,45 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.img_container {
+  &:hover + * .title {
+    color: map-get($colors, 'main');
+  }
+}
+
+.title {
+  &:hover,
+  &:focus {
+    color: map-get($colors, 'main');
+  }
+}
+
+.views_date {
+  @include flex(row, center, flex-start);
+
+  margin: 0.5em 0;
+  font-size: 0.75em;
+
+  & > .bullet {
+    font-size: 1.25em;
+    padding: 0 0.5em;
+  }
+
+  & > time {
+    font-weight: 300;
+    text-align: end;
+  }
+
+  &.small {
+    margin: 0 0 0.5em;
+  }
+}
+
+.src_container {
+  font-size: 0.75em;
+  margin: 1em 0 0;
+
+  &.small {
+    margin: 0;
+  }
+}

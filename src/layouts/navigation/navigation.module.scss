@@ -1,0 +1,73 @@
+@import 'borders.scss';
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.container {
+  width: 100%;
+  padding: 1em 1em 0;
+  font-size: 18px;
+  border-radius: 0 0 $border-radius-1 $border-radius-1;
+}
+
+.central_block {
+  @include flex(column, center, center);
+
+  width: 100%;
+}
+
+.logo {
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.search_navigation__container {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+}
+
+.search_form {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: $media-min-width-1) {
+  .container {
+    border-radius: 0;
+    font-size: 16px;
+  }
+
+  .settings {
+    margin-bottom: 1.5em;
+  }
+
+  .central_block {
+    @include flex(row, flex-start, flex-start);
+    max-width: $central-block-width-1;
+    margin: 0.5em auto 0;
+  }
+
+  .logo {
+    margin: 0 10px 0 0;
+    padding: 0;
+  }
+
+  .search_navigation__container {
+    flex-grow: 1;
+    width: auto;
+  }
+}
+
+@media (min-width: 1650px) {
+  .central_block {
+    position: relative;
+  }
+
+  .logo__container {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    margin: 0;
+    transform: translateX(-100%);
+  }
+}

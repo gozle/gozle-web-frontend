@@ -1,0 +1,17 @@
+@import 'colors.scss';
+
+.container {
+  --background: map-get($colors, 'page-block');
+  background: var(--background, white);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    width: 500px;
+    background: var(--background, white);
+  }
+}

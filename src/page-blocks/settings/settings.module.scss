@@ -1,0 +1,18 @@
+@import 'mixins.scss';
+
+.container {
+  @include flex(row, center, flex-start);
+  width: 100%;
+}
+
+.color_scheme {
+  margin: 0 0.5em 0 auto;
+
+  & + .language {
+    margin-left: 0;
+  }
+}
+
+.language {
+  margin-left: auto;
+}

@@ -1,0 +1,28 @@
+@import 'mixins.scss';
+
+.embeded_player_container {
+  position: fixed;
+  width: 400px;
+  bottom: 60px;
+  right: 15px;
+}
+
+.buttons_container {
+  @include flex(row, center, space-between);
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.big_player_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

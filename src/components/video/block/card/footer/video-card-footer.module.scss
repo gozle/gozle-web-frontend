@@ -1,0 +1,12 @@
+@import 'mixins.scss';
+
+.footer {
+  @include flex(row, center, space-between);
+
+  font-size: 0.75em;
+
+  & > time {
+    font-weight: 300;
+    text-align: end;
+  }
+}

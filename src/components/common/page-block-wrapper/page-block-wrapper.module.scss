@@ -1,0 +1,24 @@
+@import 'borders.scss';
+@import 'constants.scss';
+
+.container {
+  padding: 0.25em 0;
+  box-sizing: border-box;
+}
+
+.page_block {
+  height: 100%;
+  border-radius: $border-radius-1;
+  background-color: map-get($colors, 'page-block');
+  overflow: hidden;
+}
+
+.with_paddings {
+  padding: 1em;
+}
+
+@media (min-width: $media-min-width-1) {
+  .container {
+    padding: 0.25em;
+  }
+}

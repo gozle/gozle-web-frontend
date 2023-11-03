@@ -1,0 +1,54 @@
+@import '../scss/colors.scss';
+@import '../scss/mixins.scss';
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: black;
+
+  @include webkitFlex(row, stretch, center);
+  @include flex(row, stretch, center);
+}
+
+.player_container {
+  width: 100%;
+}
+
+.loader_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.first_play {
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 3em;
+  cursor: pointer;
+
+  background-size: contain;
+  background-position: center;
+
+  color: white;
+
+  &:hover {
+    & > .first_play_btn {
+      background-color: map-get($colors, 'main');
+    }
+  }
+}
+
+.first_play_btn {
+  background-color: transparent;
+  transition: all ease 0.2s;
+
+  padding: 0.125em 0.5em;
+
+  border-radius: 0.25em;
+}

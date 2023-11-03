@@ -1,0 +1,6 @@
+@import 'mixins.scss';
+
+.offline_page {
+  @include flex(column, center, center);
+  flex-grow: 1;
+}

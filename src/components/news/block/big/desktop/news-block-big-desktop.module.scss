@@ -1,0 +1,19 @@
+@import 'mixins.scss';
+
+.news_block {
+  @include flex(row, flex-start, space-between);
+}
+
+.img {
+  float: right;
+  min-width: 320px;
+  max-width: 50%;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.content {
+  @include flex(column, stretch, flex-start);
+  flex-grow: 1;
+  flex-shrink: 2;
+}

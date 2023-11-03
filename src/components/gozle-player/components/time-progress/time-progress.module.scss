@@ -1,0 +1,44 @@
+@import '../../scss/constants.scss';
+
+.container {
+  position: relative;
+  width: calc(100% - 1em);
+  margin: 0 0.5em 1em;
+}
+
+.progress {
+  height: 1em;
+}
+
+.progress_inner {
+  height: 0.5em;
+}
+
+@media (min-width: $media-min-width-2) {
+  .container {
+    margin: 0.5em 0.5em 0;
+  }
+
+  .progress {
+    &.no_touch {
+      & > .progress_inner {
+        height: 0.25em;
+      }
+
+      &:hover > .progress_inner {
+        height: 0.5em;
+      }
+
+      &.locked {
+        .progress_inner {
+          height: 0.25em;
+          cursor: default;
+        }
+
+        &:hover > .progress_inner {
+          height: 0.25em;
+        }
+      }
+    }
+  }
+}

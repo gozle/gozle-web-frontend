@@ -1,0 +1,7 @@
+{
+  "page_title": "{{page}} страница",
+  "people_searches": "Люди ищут",
+  "results_suggestion": "Возможно вы имели ввиду",
+  "results_summary": "Результатов: примерно {{amount, number}} ({{time, number}} сек.)",
+  "search_page_title": "Gözle - Поиск"
+}

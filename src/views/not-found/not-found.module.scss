@@ -1,0 +1,40 @@
+@import 'borders.scss';
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.not_found_page {
+  @include flex(row, center, center);
+
+  flex-grow: 1;
+  width: 100%;
+  background-color: map-get($colors, 'page-block');
+}
+
+.central_block {
+  @include flex(column, center, center);
+
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: -20px;
+  transform: translateY(-100%);
+}
+
+.error_code {
+  font-size: 8em;
+}
+
+.page_title {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.to_home {
+  padding: 0.75em 1.5em;
+  border-radius: $border-radius-1;
+  cursor: pointer;
+}

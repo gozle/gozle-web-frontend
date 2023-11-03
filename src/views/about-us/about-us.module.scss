@@ -1,0 +1,53 @@
+@import 'constants.scss';
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.about_us_page {
+  @include flex(column, flex-start, flex-start);
+
+  flex-grow: 1;
+  width: 100%;
+  background-color: map-get($colors, 'page-block');
+}
+
+.logo_language_switch {
+  width: 100%;
+}
+
+.media_content {
+  width: 100%;
+}
+
+.blog_post_container {
+  padding: 1em;
+}
+
+@media (min-width: $media-min-width-1) {
+  .blog_post_container {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: $media-min-width-2) {
+  .media_content {
+    margin: auto;
+    width: $central-block-width-3;
+  }
+}
+
+@media (min-width: $media-min-width-3) {
+  .blog_post_container {
+    padding: 2em;
+    max-width: 50%;
+  }
+
+  .media_content {
+    width: $central-block-width-2;
+  }
+}
+
+@media (min-width: $media-min-width-4) {
+  .media_content {
+    width: $central-block-width-1;
+  }
+}

@@ -1,0 +1,29 @@
+@import 'mixins.scss';
+
+.header {
+  @include flex(row, center, flex-start);
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.icon {
+  @include flex(row, center, center);
+
+  min-width: 1.5em;
+  width: 1.5em;
+  margin-right: 0.5em;
+
+  & > svg {
+    width: 100%;
+    stroke: currentColor;
+  }
+}
+
+.title {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.breaking_news_category_switch {
+  margin-left: auto;
+}

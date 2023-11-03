@@ -1,0 +1,37 @@
+@import 'constants.scss';
+@import 'mixins.scss';
+
+.container {
+  @include flex(row, flex-start, flex-start);
+
+  width: 100%;
+  padding: 0.25em 0;
+
+  @media (min-width: $media-min-width-3) {
+    padding: 0.25em 0.5em;
+  }
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  width: 150px;
+  flex-shrink: 0;
+
+  @media (min-width: $media-min-width-3) {
+    width: 200px;
+  }
+}
+
+.tags_child_container {
+  width: calc(100% - 167px);
+
+  @media (min-width: $media-min-width-3) {
+    width: calc(100% - 217px);
+  }
+}
+
+.tags_container {
+  width: 100%;
+  padding: 0 0.5em;
+}

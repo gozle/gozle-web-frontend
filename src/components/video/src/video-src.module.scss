@@ -1,0 +1,27 @@
+@import 'mixins.scss';
+
+.video_src {
+  @include flex(row, center, flex-start);
+
+  .icon {
+    margin-right: 0.6em;
+  }
+
+  .icon_large {
+    font-size: 1.25em;
+  }
+}
+
+.name {
+  font-weight: 300;
+  font-style: normal;
+}
+
+.video_src_reverse {
+  @include flex(row-reverse, center, flex-start);
+
+  & > cite {
+    margin-right: 0.6em;
+    text-align: end;
+  }
+}

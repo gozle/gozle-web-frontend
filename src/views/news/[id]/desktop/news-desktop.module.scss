@@ -1,0 +1,63 @@
+@import "borders.scss";
+@import "constants.scss";
+@import "mixins.scss";
+
+.page_block__central {
+  width: 100%;
+  margin: auto;
+}
+
+.media_content {
+  @include flex(row, flex-start, space-between);
+}
+
+.main_content {
+  width: 100%;
+}
+
+.sidebar_content {
+  display: none;
+}
+
+@media (min-width: $media-min-width-2) {
+  .page_block__central {
+    width: $central-block-width-3;
+  }
+
+  .main_content {
+    width: 66.666667%;
+  }
+
+  .sidebar_content {
+    display: block;
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: $media-min-width-3) {
+  .page_block__central {
+    width: $central-block-width-2;
+  }
+
+  .main_content {
+    width: 70%;
+  }
+
+  .sidebar_content {
+    width: 30%;
+  }
+}
+
+@media (min-width: $media-min-width-4) {
+  .page_block__central {
+    width: $central-block-width-1;
+  }
+
+  .main_content {
+    width: 75%;
+  }
+
+  .sidebar_content {
+    width: 25%;
+  }
+}

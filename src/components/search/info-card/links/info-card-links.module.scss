@@ -1,0 +1,42 @@
+@import 'borders.scss';
+@import 'mixins.scss';
+
+.container {
+  @include flex(column, flex-start, flex-start);
+}
+
+.list {
+  @include flex(row, flex-start, flex-start);
+  width: 100%;
+}
+
+.title {
+  font-size: 1.25em;
+  margin-bottom: 0.25em;
+}
+
+.block {
+  @include flex(row, center, center);
+
+  padding: 0.5em 1em;
+
+  border: $border-1-gray;
+  border-radius: $border-radius-1;
+
+  font-size: 1em;
+
+  & + .block {
+    margin-left: 0.5em;
+  }
+}
+
+.icon {
+  display: flex;
+
+  margin-right: 0.5em;
+}
+
+.label {
+  margin-right: 0.25em;
+  font-weight: 700;
+}

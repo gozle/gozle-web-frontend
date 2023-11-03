@@ -1,0 +1,17 @@
+@import 'borders.scss';
+
+.container {
+  display: flex;
+
+  position: relative;
+  border-radius: $border-radius-1;
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+  & > a {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}

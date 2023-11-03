@@ -1,0 +1,23 @@
+@import 'borders.scss';
+
+.arrow_btn {
+  font-size: 1em;
+
+  background-color: white;
+  color: black;
+  border: $border-1-lightgray;
+  border-radius: 50%;
+  padding: calc(0.625em - 1px);
+  width: 2.25em;
+  height: 2.25em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+  }
+
+  & > svg {
+    height: 1em;
+    width: 1em;
+  }
+}

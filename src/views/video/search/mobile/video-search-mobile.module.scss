@@ -1,0 +1,23 @@
+@import 'borders.scss';
+
+.main_content {
+  width: 100%;
+}
+
+.header {
+  font-size: 1.25em;
+  font-weight: 700;
+  border-bottom: $border-1-gray;
+  padding: 0.25em 0 0;
+  margin: 0 0.5em 0.5em;
+}
+
+.videos_header {
+  margin-top: 1em;
+}
+
+.channel {
+  width: 250px;
+  flex-shrink: 0;
+  padding: 0.25em;
+}

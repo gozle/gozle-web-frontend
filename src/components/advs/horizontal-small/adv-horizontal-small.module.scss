@@ -1,0 +1,59 @@
+@import 'borders.scss';
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.horizontal {
+  @include flex(row, stretch, space-between);
+  overflow: hidden;
+  padding: 0.25em;
+  max-width: 420px;
+
+  &:hover,
+  &:focus {
+    & .title {
+      color: map-get($colors, 'main');
+    }
+  }
+}
+
+.img_container {
+  width: 30%;
+  border-radius: $border-radius-1;
+  overflow: hidden;
+}
+
+.img {
+  border-radius: $border-radius-2;
+}
+
+.info {
+  width: 70%;
+  padding: 0 0.5em;
+}
+
+.header {
+  margin-bottom: 0.125em;
+}
+
+.src {
+  @include flex(row, center, flex-start);
+
+  font-size: 0.75em;
+  margin-bottom: 0.25em;
+
+  & > div {
+    margin-right: 0.5em;
+  }
+}
+
+.src_name {
+  color: map-get($colors, 'main');
+}
+
+.sign {
+  font-weight: 300;
+}
+
+.title {
+  font-size: 0.8em;
+}

@@ -1,0 +1,45 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.nav {
+  @include flex(row, center, center);
+}
+
+.item {
+  display: block;
+
+  margin: 0.25em;
+  padding: 0.5em;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 2.25em;
+
+  &:hover,
+  &:active {
+    color: map-get($colors, 'main');
+  }
+
+  &.active {
+    color: map-get($colors, 'main');
+    font-weight: 700;
+  }
+}
+
+.central_block {
+  @include flex(row, flex-start, flex-start);
+  overflow: hidden;
+  height: 2.75em;
+}
+
+.list {
+  @include flex(row, flex-start, center);
+  flex-wrap: wrap;
+}
+
+.extra_items {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  z-index: 1;
+}

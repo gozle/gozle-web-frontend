@@ -1,0 +1,7 @@
+{
+  "page_title": "{{page}} page",
+  "people_searches": "People are searching",
+  "results_suggestion": "Perhaps you meant",
+  "results_summary": "About {{amount, number}} results ({{time, number}} seconds)",
+  "search_page_title": "Gözle - Search"
+}

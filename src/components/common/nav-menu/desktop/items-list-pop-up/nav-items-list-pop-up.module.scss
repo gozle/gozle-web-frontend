@@ -1,0 +1,15 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+
+.list {
+  @include flex(column, flex-start, flex-start);
+}
+
+.item {
+  padding: 0.25em 0;
+
+  &:hover,
+  &:active {
+    color: map-get($colors, 'main');
+  }
+}
