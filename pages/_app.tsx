@@ -21,6 +21,7 @@ import { wrapper } from 'lib/store';
 import { setColorScheme } from 'lib/store/features/color-scheme';
 import { setLanguages } from 'lib/store/features/languages';
 import { setIp, setMobile, setUserAgent } from 'lib/store/features/settings';
+import { setWideScreen } from 'lib/store/features/video-settings';
 import { appTheme } from 'lib/theme';
 import { getLanguageList } from 'services/admin-api';
 
@@ -30,7 +31,6 @@ const i18nextConfig = require('../next-i18next.config.js');
 import '../styles/page.scss';
 import '../styles/globals.scss';
 import '../styles/nprogress.scss';
-import { setWideScreen } from 'lib/store/features/video-settings';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactElement;

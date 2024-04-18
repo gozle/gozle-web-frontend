@@ -7,5 +7,7 @@
   "playback_settings": "Playback settings",
   "quality": "Quality",
   "rate": "Rate",
-  "skip": "Skip"
+  "sec": "sec",
+  "skip": "Skip",
+  "video_will_start_after_ad": "The video will start after the ad"
 }

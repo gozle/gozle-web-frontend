@@ -3,18 +3,18 @@
   "short_name": "Gozle",
   "icons": [
     {
-      "src": "/icons/gozle-png/192x192.png",
+      "src": "/icons/gozle-png/192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/gozle-png/384x384.png",
+      "src": "/icons/gozle-png/384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "/icons/gozle-png/512x512.png",
+      "src": "/icons/gozle-png/512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

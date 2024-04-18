@@ -1,8 +1,11 @@
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import React, { useEffect, useState } from 'react';
+import { useCookies } from 'react-cookie';
 
 import { getVideoLink } from 'lib/helpers';
+import { useAppDispatch, useAppSelector } from 'lib/hooks';
+import { setWideScreen } from 'lib/store/features/video-settings';
 import type { VideoAd, VideoData, VideoExtendedData } from 'lib/types';
 import {
   useGetVideoByChannelQuery,
@@ -11,9 +14,6 @@ import {
 import { useGetVideoAdQuery } from 'services/video-api/video-ad';
 
 import VideoPlayerClosure from './video-player-closure.component';
-import { useCookies } from 'react-cookie';
-import { useAppDispatch, useAppSelector } from 'lib/hooks';
-import { setWideScreen } from 'lib/store/features/video-settings';
 
 // const VideoPlayerClosure = dynamic(
 //   () => import('./video-player-closure.component'),
@@ -31,7 +31,7 @@ interface IEmbededPlayerContext {
   adShowed: boolean;
   data?: VideoExtendedData | null;
   firstPlay: boolean;
-  onFirstPlay: () => void;
+  onFirstPlayClick: () => void;
   onSkipAd?: () => void;
   playNext?: () => void;
   reset: () => void;
@@ -44,7 +44,7 @@ interface IEmbededPlayerContext {
 export const EmbededPlayerContext = React.createContext<IEmbededPlayerContext>({
   adShowed: false,
   firstPlay: false,
-  onFirstPlay: () => {},
+  onFirstPlayClick: () => {},
   reset: () => {},
   toggleWideScreen: () => {},
   videoId: '',
@@ -144,7 +144,7 @@ export const WithEmbededPlayerLayout = ({ children }: P) => {
     dispatch(setWideScreen(!wideScreen));
   };
   const handleSkipAd = () => setAdShowed(true);
-  const handleFirstPlay = () => setFirstPlay(true);
+  const handleFirstPlayClick = () => setFirstPlay(true);
 
   useEffect(() => {
     if (isError) setAdShowed(true);
@@ -157,7 +157,7 @@ export const WithEmbededPlayerLayout = ({ children }: P) => {
         adShowed,
         data,
         firstPlay,
-        onFirstPlay: handleFirstPlay,
+        onFirstPlayClick: handleFirstPlayClick,
         onSkipAd: handleSkipAd,
         playNext,
         reset,

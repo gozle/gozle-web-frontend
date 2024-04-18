@@ -10,10 +10,10 @@ import { createPortal } from 'react-dom';
 
 import { GozlePlayer } from '@/components/gozle-player/player';
 import { VideoEmbededPlayer } from '@/components/video/embeded-player';
+import { count } from 'services/app-api';
 
 import { EmbededPlayerContext } from './embeded-player.layout';
 import styles from './video-player-closure.module.scss';
-import { count } from 'services/app-api';
 
 // Замыкание плеера в DOM чтобы он не перерендерился при переходе между страницами
 export const VideoPlayerClosure = () => {
@@ -24,7 +24,7 @@ export const VideoPlayerClosure = () => {
     adShowed,
     data,
     firstPlay,
-    onFirstPlay,
+    onFirstPlayClick,
     onSkipAd,
     playNext,
     reset,
@@ -96,7 +96,7 @@ export const VideoPlayerClosure = () => {
         onEnded={handleVideoEnded}
         onReady={handleReady}
         onSkip={onSkipAd}
-        onFirstPlay={onFirstPlay}
+        onFirstPlay={onFirstPlayClick}
         skipoffset={isAd ? 5 : undefined}
         thumbnail={data.thumbnail}
         title={isAd ? ad.title : undefined}

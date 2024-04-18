@@ -1,16 +1,17 @@
-const { i18n } = require('./next-i18next.config');
 const path = require('path');
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: false,
+});
 const withPWA = require('next-pwa')({
   mode: 'production',
   dest: 'public',
   cacheOnFrontEndNav: true,
   disable: true,
 });
+const withTM = require('next-transpile-modules')(['@ratayev710/hls-player']);
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: false,
-});
+const { i18n } = require('./next-i18next.config');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -63,4 +64,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(withBundleAnalyzer(nextConfig));
+module.exports = withTM(withPWA(withBundleAnalyzer(nextConfig)));

@@ -224,15 +224,15 @@ const ImageSearch: NextPageWithLayout<SSP> = (
         <title>{t('images_page_title')}</title>
       </Head>
       <WithNavigationLayout
-        extraButtons={
-          <ImagePicker
-            image={image}
-            url={url}
-            onUrlChange={handleUrlChange}
-            onUrlSearch={handleUrlSearch}
-            onPick={handlePick}
-          />
-        }
+        // extraButtons={
+        //   <ImagePicker
+        //     image={image}
+        //     url={url}
+        //     onUrlChange={handleUrlChange}
+        //     onUrlSearch={handleUrlSearch}
+        //     onPick={handlePick}
+        //   />
+        // }
         hideLanguage
         href="/images"
       >
